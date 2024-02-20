@@ -18,6 +18,7 @@
     "eslint-config-prettier": "^9.1.0",
     "nodemon": "^3.0.3",
     "prettier": "^3.2.5",
+    "sharp": "^0.33.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
