@@ -1,7 +1,7 @@
 import path from 'path';
 import fs from 'fs';
 
-export const getFilePath = (imageFolder: string, filename: string) => {
+export const getFilePath = (imageFolder: string, filename: string): string => {
     let filePath = '';
     const files = fs.readdirSync(imageFolder);
     for (const file of files) {
