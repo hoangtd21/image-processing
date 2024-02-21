@@ -19,7 +19,7 @@ images.get('/', async (req, res) => {
       .toBuffer();
 
     res.set('Content-Type', 'image/jpeg');
-    return res.send(resizedImage);
+    return res.status(200).send(resizedImage);
   } catch (error) {
     return res.status(500).send('Server error');
   }
