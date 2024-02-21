@@ -6,6 +6,10 @@ App is designed to handle image processing requests in an Express.js application
 
 ## Usage
 
+Install library: `npm install`
+
+Start app: `npm start`
+
 To use api, make a GET request to the appropriate endpoint with the following query parameters:
 
 -   `filename`: The name of the image file to be processed.
