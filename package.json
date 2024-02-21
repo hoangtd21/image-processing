@@ -7,6 +7,10 @@
     "build": "npx tsc",
     "start": "nodemon src/index.ts",
     "jasmine": "jasmine",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint . --fix",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
     "test": "npm run build && npm run jasmine"
   },
   "author": "hoangtd21",
