@@ -20,5 +20,5 @@ To use api, make a GET request to the appropriate endpoint with the following qu
 
 ```typescript
 // Sample request
-GET /api/imageProcess?filename=vietnam&width=300&height=200
+GET http://localhost:3000/api/images?filename=vietnam&width=200&height=200
 ```
