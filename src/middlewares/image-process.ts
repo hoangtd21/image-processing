@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import sharp from 'sharp';
 import { getFilePath } from '../utils/get-file-path';
+import { isValidNumber } from '../utils/valid-number';
 
 export const imageProcess = async (
     req: Request,
@@ -14,6 +15,11 @@ export const imageProcess = async (
 
         if (!filename || !width || !height) {
             res.status(400).send('Missing some properties');
+            return;
+        }
+
+        if (!isValidNumber(String(width)) || !isValidNumber(String(height))) {
+            res.status(400).send('Image size is not valid');
             return;
         }
 
