@@ -24,11 +24,11 @@ export const imageProcess = async (
         }
 
         const imageFolder = path.resolve(`public/images`);
-        if (!fs.existsSync(imageFolder)) {
-            res.status(404).send('Image folder not found');
+        const imagePath = getFilePath(imageFolder, filename.toString());
+        if (!fs.existsSync(imagePath)) {
+            res.status(404).send('Image not found');
             return;
         }
-        const imagePath = getFilePath(imageFolder, filename.toString());
 
         const resizedImage = await sharp(imagePath)
             .resize(Number(width), Number(height))
